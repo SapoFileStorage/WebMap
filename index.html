@@ -116,6 +116,8 @@
 		<div style="background-color: #20aca7; color: #fff; padding: 10px; text-align: center; font-weight: bold;width: 60%;">
         SICUREZZA IN CANTIERE
 		</div>
+			
+				
 		
         <div id="map">
             <div id="popup" class="ol-popup">
@@ -123,11 +125,15 @@
                 <div id="popup-content"></div>
             </div>
         </div>
+		
+		
 		<div id="link-container">
 			<!-- Aggiunta del tag <a> per rendere cliccabile il link -->
 			<a href="#" id="dynamic-link" target="_blank">Clicca qui</a>
 			<!-- Fine aggiunta -->
 		</div>
+		
+		
 		<!-- Aggiunta del riquadro nella parte destra con l'anteprima del sito -->
 		<div id="preview-container" style="position: fixed; bottom: 0; right: 0; width: 40%; height: 100%; overflow: auto; border-left: 1px solid #ccc;">
 		<!-- Aggiunta del titolo -->
@@ -135,6 +141,12 @@
             Consultazione dei bollettini meteo-idrologici di ARPA Lombardia
         </div>
         <!-- Fine aggiunta del titolo -->
+		
+		<!-- Aggiunta del logo in basso a sinistra in un riquadro 10% per 10% -->
+		<div style="position: fixed; bottom: 0; left: 0; padding: 10px;background-color: #003B65;">
+			<img src="https://piemontecnica.com/wp-content/uploads/2017/05/logo-piemontecnica-solo-quad-trsp.png" alt="Piemontecnica Logo" style="width: 10px;">
+		</div>
+		
         <iframe src="https://www.allertalom.regione.lombardia.it/mappa;jsessionid=8459BF2E4D5F9876F1145BF936E1609A?cdTipologiaGis=10&cdTipologiaGestcom=1&cdScenario=7&nomeRischio=Idro-Meteo%20%3Cbr%3E%20IDRAULICO&cdAvviso=null" style="width: 100%; height: 100%; border: none;"></iframe>
 		</div>
         <script src="resources/qgis2web_expressions.js"></script>
@@ -149,22 +161,6 @@
         <script src="./resources/Autolinker.min.js"></script>
         <script src="./resources/qgis2web.js"></script>
 		
-			<script>
-			// Estrai l'oggetto JSON dal tuo script o caricalo da qualche parte
-			var json_Allertemeteo_1 = {"type":"FeatureCollection","name":"Allertemeteo_1","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":null,"Link":"https://www.allertalom.regione.lombardia.it/mappa;jsessionid=8459BF2E4D5F9876F1145BF936E1609A?cdTipologiaGis=10&cdTipologiaGestcom=1&cdScenario=7&nomeRischio=Idro-Meteo%20%3Cbr%3E%20IDRAULICO&cdAvviso=null"},"geometry":{"type":"Point","coordinates":[10.180608929343428,45.041857009447838]}}]};
-		
-			// Ottieni il link e l'elemento HTML
-			var link = json_Allertemeteo_1.features[0].properties.Link;
-			var dynamicLink = document.getElementById("dynamic-link");
-		
-			// Assegna il link all'elemento HTML
-			dynamicLink.href = link;
-		
-			// Aggiungi un gestore di eventi per aprire il link quando l'elemento viene cliccato
-			dynamicLink.addEventListener("click", function(event) {
-				event.preventDefault();
-				window.open(link, "_blank");
-			});
-			</script>
+			
     </body>
 </html>
