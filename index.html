@@ -158,32 +158,12 @@
             <!-- Aggiunta del riquadro a destra -->
             <iframe src="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa/allerta/"  style="width: 100%; height: 100%; border: none;"> </iframe>
         </div>
-		<!-- Pulsanti per gli idrometri -->
-		<div id="idrometri" style="position: fixed; top: 10px; left: 10px;">
-			<!-- Inserisci qui gli idrometri, ognuno con un attributo data-link-idro che contiene il link -->
-			<div class="idrometro" data-link-idro="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa_graphs/dettaglio_stazione/?id=001271900&param=idro">Idrometro 1</div>
-			<div class="idrometro" data-link-idro="https://www.arpa.piemonte.it/rischi_naturali/snippets_arpa_graphs/dettaglio_stazione/?id=001179900&param=idro">Idrometro 2</div>
-		</div>
-
+		
 		
         <div id="layerswitcher" class="ol-layerswitcher ol-unselectable ol-control" style="top: 10px; right: 2000px;">
         </div>
 
-		<script>
-			// Ottieni tutti gli elementi con la classe idrometro
-			var idrometri = document.querySelectorAll('.idrometro');
 		
-			// Aggiungi un gestore di eventi a ciascun idrometro
-			idrometri.forEach(function(idrometro) {
-				idrometro.addEventListener('click', function() {
-					// Ottieni il link idro associato all'idrometro
-					var linkIdro = idrometro.getAttribute('data-link-idro');
-					
-					// Cambia l'URL dell'iframe per aprire il link idro desiderato
-					document.getElementById('idroiframe').src = linkIdro;
-				});
-			});
-		</script>
         <script src="resources/qgis2web_expressions.js"></script>
         <script src="resources/polyfills.js"></script>
         <script src="./resources/functions.js"></script>
